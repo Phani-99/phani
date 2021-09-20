@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+
+/*Name this external file hover_css.css*/
+body{
+		margin: 2%;
+		border: 1px solid black;
+		background-color: antiquewhite;
+}
+#image{
+     line-height:450px;
+    width: 575px;
+    height: 450px;
+    border:5px solid black;
+    margin:0 auto;
+    background-color: peachpuff;
+
+    background-repeat: no-repeat;
+    color:#FFFFFF;
+    text-align: center;
+    background-size: 100%;
+    margin-bottom:25px;
+    font-size: 150%;
+}
+.preview{
+		width:10%;
+		margin-left:17%;
+    border: 10px solid black;
+}
+img{
+
+		width:50%;
+
+}
+
+</style>
+	<meta charset="UTF-8">
+	<title>Photo Gallery</title>
+	<link rel="stylesheet" href="css/hover_css.css">
+	<script src = "js/hover_script.js"></script>
+</head>
+<body>
+
+<script>
+function changeImage() {
+  var image = document.getElementById('myImage');
+  if (image.src.match("bulbon")) {
+    image.src = "Work.jpeg";
+  } else {
+    image.src = "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-7.jpg";
+  }
+}
+</script>
+	
+	<div id = "Image"  >
+<img id="myImage" onclick="changeImage()" src="Work.jpeg" >
+
+		
+	</div>
+	
+	<img class = "preview" alt = "Batter is ready" src = "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-7.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+<img class = "preview" alt = "Perfect Baking" src = "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-6.jpg"  onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+<img class = "preview" alt = "Yummy yummy cup cake" src = "https://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()">
+
+</body>
+</html>
